@@ -121,7 +121,7 @@ The float_display function displays floating-point variable without appending ne
 
 Syntax:
 ```cmd
-call :float_display name
+call :float_display_nnl name
 ```
 
 Parameters:
@@ -129,6 +129,55 @@ Parameters:
 
 Description: <br>
 This function displays the value of the floating-point variable without appending newline.
+</details>
+<details>
+<summary><h4>float_extract</h4></summary>
+The float_extract function extracts floating-point variable to the provided variables.
+
+Syntax:
+```cmd
+call :float_extract name dest_whole dest_frac
+```
+
+Parameters:
+- `name` (string): The name of the floating-point variable to display extract.
+- `dest_whole` (string): The name of variable to extract the whole part to.
+- `dest_frac` (string): The name of variable to extract the fractional part to.
+
+Description: <br>
+This function extracts the value of the floating-point variable to the provided ones.
+</details>
+<details>
+<summary><h4>float_extract_whole</h4></summary>
+The float_extract function extracts whole part of floating-point variable to provided variable.
+
+Syntax:
+```cmd
+call :float_extract_whole name dest
+```
+
+Parameters:
+- `name` (string): The name of the floating-point variable to display extract.
+- `dest` (string): The name of variable to extract the whole part to.
+
+Description: <br>
+This function extracts the value of the whole part of the floating-point variable to provided one.
+</details>
+<details>
+<summary><h4>float_extract_fraction</h4></summary>
+The float_extract function extracts fractional part of floating-point variable to provided variable.
+
+Syntax:
+```cmd
+call :float_extract_fraction name dest
+```
+
+Parameters:
+- `name` (string): The name of the floating-point variable to display extract.
+- `dest` (string): The name of variable to extract the fractional part to.
+
+Description: <br>
+This function extracts the value of the fractional part of the floating-point variable to provided one.
 </details>
 </details>
 

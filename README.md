@@ -12,11 +12,10 @@ Floating/Fixed point numbers implemented purely in batch.
 
 
 ## Documentation
-
-### `_float`
-
-#### `float`
-
+<details>
+<summary><h3>_float</h3></summary>
+<details>
+<summary><h4>float</h4></summary>
 The `float` function initializes a floating-point variable with a specified name and value, combining both an integer and fractional part.
 
 Syntax:
@@ -30,12 +29,13 @@ Parameters:
 - `numerator`   (integer, optional): The numerator of the fractional part.
 - `denominator` (integer, optional): The denominator of the fractional part.
 
-Description: 
+Description: <br>
 This function creates a floating-point variable by combining the whole part and fractional part, calculated as:
-
 $` \text{data}=\text{whole\_part}*32768+\frac{\text{numerator}*32768}{\text{denominator}} `$
 
-#### `float_add`
+</details>
+<details>
+<summary><h4>float_add</h4></summary>
 The `float_add` function adds one floating-point variable to another.
 
 Syntax:
@@ -48,7 +48,8 @@ Parameters:
 - `second`      (string):  The name of the second floating-point variable to add.
 - `to`          (string, optional):  The name of the resulting variable.
 
-Description: This function adds the value of the second floating-point variable to the first and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
+Description: <br>
+This function adds the value of the second floating-point variable to the first and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
 
 #### `float_subtract`
 The float_subtract function subtracts one floating-point variable from another.
@@ -64,9 +65,11 @@ Parameters:
 - `second` (string): The name of the second floating-point variable (subtrahend).
 - `to` (optional, string): The name of the resulting floating-point variable that will hold the difference. If not provided, first will be updated with the result.
 
-Description: This function subtracts the value of the second floating-point variable from the first and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
-
-#### `float_multiply`
+Description: <br>
+This function subtracts the value of the second floating-point variable from the first and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
+</details>
+<details>
+<summary><h4>float_multiply</h4></summary>
 The float_multiply function multiplies one floating-point variable by another.
 
 Syntax:
@@ -79,8 +82,9 @@ Parameters:
 - `to` (optional, string): The name of the resulting floating-point variable that will hold the product. If not provided, first will be updated with the result.
 
 Description: This function multiplies the values of the first and second floating-point variables and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
-
-#### `float_divide`
+</details>
+<details>
+<summary><h4>float_divide</h4></summary>
 The float_divide function divides one floating-point variable by another.
 
 Syntax:
@@ -93,7 +97,10 @@ Parameters:
 - `second` (string): The name of the second floating-point variable (divisor).
 - `to` (optional, string): The name of the resulting floating-point variable that will hold the quotient. If not provided, first will be updated with the result.
 
-Description: This function divides the value of the first floating-point variable by the value of the second floating-point variable and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result. If second is zero, the function may handle division by zero based on the system's error-handling configuration.
+Description: <br>
+This function divides the value of the first floating-point variable by the value of the second floating-point variable and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result. If second is zero, the function may handle division by zero based on the system's error-handling configuration.
+</details>
+</details>
 
 ## License
 

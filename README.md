@@ -56,8 +56,9 @@ Result: <br>
 
 Description: <br>
 This function adds the value of the second floating-point variable to the first and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
-
-#### `float_subtract`
+</details>
+<details>
+<summary><h4>float_subtract</h4></summary>
 The float_subtract function subtracts one floating-point variable from another.
 
 Syntax:
@@ -358,9 +359,28 @@ Result: <br>
 `name` floating-point variable will contain the value.
 
 Description: <br>
-This function creates a floating-point variable by combining the whole part and fractional part, calculated as:
-$` \text{data}=\text{whole\_part}*32768+\frac{\text{numerator}*32768}{\text{denominator}} `$
+This function creates a floating-point variable by numerator and denominator, calculated as:
+$` \text{data\_numerator}=\text{whole\_part}*\text{denominator}+\text{numerator} `$ <br>
+$` \text{data\_denominator}=\text{denominator} `$
+</details>
+<details>
+<summary><h4>float_shorten</h4></summary>
+The `float_shorten` function shortens one floating-point variable.
 
+Syntax:
+```cmd
+call :float_shorten first [to]
+```
+
+Parameters:
+- `first`       (string):  The name of the floating-point variable to shorten (addend). If no result variable is provided, this will be updated with the result.
+- `to`          (string, optional):  The name of the resulting floating-point variable that will hold the result. If not provided, `first` will be updated with the result.
+
+Result: <br>
+`to` will contain the result if provided, `first` otherwise.
+
+Description: <br>
+This function shortens the value of the floating-point variable and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
 </details>
 <details>
 <summary><h4>float_add</h4></summary>
@@ -381,8 +401,9 @@ Result: <br>
 
 Description: <br>
 This function adds the value of the second floating-point variable to the first and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
-
-#### `float_subtract`
+</details>
+<details>
+<summary><h4>float_subtract</h4></summary>
 The float_subtract function subtracts one floating-point variable from another.
 
 Syntax:

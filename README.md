@@ -7,7 +7,7 @@ Floating/Fixed point numbers implemented purely in batch.
 ## Features
 
 - Addition, subtraction, multiplication for _float, __float, ___float_positive
-- Division for Addition for _float, __float
+- Division for _float, __float
 
 
 

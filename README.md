@@ -21,14 +21,14 @@ The `float` function initializes a floating-point variable with a specified name
 
 Syntax:
 ```cmd
-call :float name <whole_part> <numerator> <denominator>
+call :float name <whole_part> <[numerator]> <[denominator]>
 ```
 Parameters:
 
 - `name`        (string):  The name of the floating-point variable.
 - `whole_part`  (integer): The whole number part of the value.
-- `numerator`   (integer): The numerator of the fractional part.
-- `denominator` (integer): The denominator of the fractional part.
+- `numerator`   (integer, optional): The numerator of the fractional part.
+- `denominator` (integer, optional): The denominator of the fractional part.
 
 Description: 
 This function creates a floating-point variable by combining the whole part and fractional part, calculated as:
@@ -46,7 +46,7 @@ call :float_add first second [to]
 Parameters:
 - `first`       (string):  The name of the first floating-point variable to add.
 - `second`      (string):  The name of the second floating-point variable to add.
-- `to`          (optional, string):  The name of the resulting variable.
+- `to`          (string, optional):  The name of the resulting variable.
 
 Description: This function adds the value of the second floating-point variable to the first and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
 

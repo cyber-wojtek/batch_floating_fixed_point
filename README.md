@@ -113,7 +113,7 @@ Result: <br>
 `to` will contain the result if provided, `first` otherwise.
 
 Description: <br>
-This function divides the value of the first floating-point variable by the value of the second floating-point variable and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result. If second is zero, the function may handle division by zero based on the system's error-handling configuration.
+This function divides the value of the first floating-point variable by the value of the second floating-point variable and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result.
 </details>
 <details>
 <summary><h4>float_display</h4></summary>
@@ -220,10 +220,122 @@ Result: <br>
 `errorlevel` will contain the result of the comparison: 1 if greater, 0 if equal, -1 if less.
 
 Description: <br>
-This function extracts the value of the fractional part of the floating-point variable to provided one.
+This function compares the value of the first floating-point variable to the value of the second floating-point variable and stores the result in `errorlevel`: 1 if greater, 0 if equal, -1 if less.
 </details>
-</details>
+<details>
+<summary><h4>float_compare_greater</h4></summary>
+The float_compare function compares one floating-point variable to another.
 
+Syntax:
+```cmd
+call :float_compare_greater first second
+```
+
+Parameters:
+- `first` (string): The name of the first floating-point variable
+- `second` (string): The name of the second floating-point variable.
+
+Result: <br>
+`errorlevel` will contain the result of the comparison: 1 if greater, 0 otherwise.
+
+Description: <br>
+This function compares the value of the first floating-point variable to the value of the second floating-point variable and stores the result in `errorlevel`: 1 if greater, 0 otherwise.
+</details>
+<details>
+<summary><h4>float_compare_less</h4></summary>
+The float_compare function compares one floating-point variable to another.
+
+Syntax:
+```cmd
+call :float_compare_less first second
+```
+
+Parameters:
+- `first` (string): The name of the first floating-point variable
+- `second` (string): The name of the second floating-point variable.
+
+Result: <br>
+`errorlevel` will contain the result of the comparison: 1 if less, 0 otherwise.
+
+Description: <br>
+This function compares the value of the first floating-point variable to the value of the second floating-point variable and stores the result in `errorlevel`: 1 if less, 0 otherwise.
+</details>
+<details>
+<summary><h4>float_compare_equal</h4></summary>
+The float_compare function compares one floating-point variable to another.
+
+Syntax:
+```cmd
+call :float_compare_equal first second
+```
+
+Parameters:
+- `first` (string): The name of the first floating-point variable
+- `second` (string): The name of the second floating-point variable.
+
+Result: <br>
+`errorlevel` will contain the result of the comparison: 1 if equal, 0 otherwise.
+
+Description: <br>
+This function compares the value of the first floating-point variable to the value of the second floating-point variable and stores the result in `errorlevel`: 1 if equal, 0 otherwise.
+</details>
+<details>
+<summary><h4>float_compare_greater_or_equal</h4></summary>
+The float_compare function compares one floating-point variable to another.
+
+Syntax:
+```cmd
+call :float_compare_greater_or_equal first second
+```
+
+Parameters:
+- `first` (string): The name of the first floating-point variable
+- `second` (string): The name of the second floating-point variable.
+
+Result: <br>
+`errorlevel` will contain the result of the comparison: 1 if greater or equal, 0 otherwise.
+
+Description: <br>
+This function compares the value of the first floating-point variable to the value of the second floating-point variable and stores the result in errorlevel: 1 if greater or equal, 0 otherwise.
+</details>
+<details>
+<summary><h4>float_compare_less_or_equal</h4></summary>
+The float_compare function compares one floating-point variable to another.
+
+Syntax:
+```cmd
+call :float_compare_less_or_equal first second
+```
+
+Parameters:
+- `first` (string): The name of the first floating-point variable
+- `second` (string): The name of the second floating-point variable.
+
+Result: <br>
+`errorlevel` will contain the result of the comparison: 1 if less or equal, 0 otherwise.
+
+Description: <br>
+This function compares the value of the first floating-point variable to the value of the second floating-point variable and stores the result in errorlevel: 1 if greater or equal, 0 otherwise.
+</details>
+<details>
+<summary><h4>float_compare_not_equal</h4></summary>
+The float_compare function compares one floating-point variable to another.
+
+Syntax:
+```cmd
+call :float_compare_npt_equal first second
+```
+
+Parameters:
+- `first` (string): The name of the first floating-point variable
+- `second` (string): The name of the second floating-point variable.
+
+Result: <br>
+`errorlevel` will contain the result of the comparison: 1 if not equal, 0 otherwise.
+
+Description: <br>
+This function compares the value of the first floating-point variable to the value of the second floating-point variable and stores the result in errorlevel: 1 if not equal, 0 otherwise.
+</details>
 ## License
 
 [batch_floating_fixed_point](https://github.com/cyber-wojtek/batch_floating_fixed_point) © 2024 by [Wojciech Dudek](https://github.com/cyber-wojtek) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1) 

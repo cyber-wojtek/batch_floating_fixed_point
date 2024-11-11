@@ -719,7 +719,7 @@ This function compares the value of the first floating-point variable to the val
 
 ## License
 
-[batch_floating_fixed_point](https://github.com/cyber-wojtek/batch_floating_fixed_point) © 2024 by [Wojciech Dudek](https://github.com/cyber-wojtek) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1) 
+[batch_floating_fixed_point](https://github.com/cyber-wojtek/batch_floating_fixed_point) © 2024 by [Wojciech Dudek](https://github.com/cyber-wojtek) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1) 
 
 ## Authors
 

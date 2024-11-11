@@ -323,7 +323,7 @@ The float_compare function compares one floating-point variable to another.
 
 Syntax:
 ```cmd
-call :float_compare_npt_equal first second
+call :float_compare_not_equal first second
 ```
 
 Parameters:

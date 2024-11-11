@@ -263,10 +263,79 @@ set /a "%2=%1_whole"
 set /a "%3=%1_frac"
 exit /b
 
+:fixed_positive_compare first second
+if !%1_whole! gtr !%2_whole! (
+	exit /b 1
+) else if !%1_frac! gtr !%2_frac! (
+	exit /b 1
+) else if !%1_whole! lss !%2_whole! (
+	exit /b -1
+) else if !%1_frac! lss !%2_frac! (
+	exit /b -1
+) else (
+	exit /b 0
+)
+
+:fixed_positive_compare_greater first second
+if !%1_whole! gtr !%2_whole! (
+	exit /b 1
+) else if !%1_frac! gtr !%2_frac! (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:fixed_positive_compare_less first second
+if !%1_whole! lss !%2_whole! (
+	exit /b 1
+) else if !%1_frac! lss !%2_frac! (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:fixed_positive_compare_equal first second
+if !%1_whole! equ !%2_whole! ( 
+	  if !%1_frac! equ !%2_frac! (
+	   exit /b 1
+	) else (
+		exit /b 0
+	)
+) else (
+	exit /b 0
+)
+
+:fixed_positive_compare_greater_or_equal first second
+if !%1_whole! geq !%2_whole! (
+	exit /b 1
+) else if !%1_frac! geq !%2_frac! (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:fixed_positive_compare_less_or_equal first second
+if !%1_whole! leq !%2_whole! (
+	exit /b 1
+) else if !%1_frac! leq !%2_frac! (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:fixed_positive_compare_not_equal first second
+if !%1_whole! neq !%2_whole! (
+	exit /b 1
+) else if !%1_frac! neq !%2_frac! (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
 :main
 
 call :fixed_positive x 5 21220000
-call :fixed_positive y 2 12345500
+call :fixed_positive y 5 21220000
 
 echo XY
 call :fixed_positive_display x
@@ -296,4 +365,53 @@ call :fixed_positive_value_multiply x 1 50000000 z
 
 call :fixed_positive_display z
 
+call :fixed_positive_compare x y
+if errorlevel 1 (
+	echo X is greater than Y
+) else if errorlevel -1 (
+	echo X is less than Y
+) else (
+	echo X is equal to Y
+)
 
+call :fixed_positive_compare_greater x y
+if errorlevel 1 (
+	echo X is greater than Y
+) else (
+	echo X is not greater than Y
+)
+
+call :fixed_positive_compare_less x y
+if errorlevel 1 (
+	echo X is less than Y
+) else (
+	echo X is not less than Y
+)
+
+call :fixed_positive_compare_equal x y
+if errorlevel 1 (
+	echo X is equal to Y
+) else (
+	echo X is not equal to Y
+)
+
+call :fixed_positive_compare_greater_or_equal x y
+if errorlevel 1 (
+	echo X is greater than or equal to Y
+) else (
+	echo X is not greater than or equal to Y
+)
+
+call :fixed_positive_compare_less_or_equal x y
+if errorlevel 1 (
+	echo X is less than or equal to Y
+) else (
+	echo X is not less than or equal to Y
+)
+
+call :fixed_positive_compare_not_equal x y
+if errorlevel 1 (
+	echo X is not equal to Y
+) else (
+	echo X is equal to Y
+)

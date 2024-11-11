@@ -73,6 +73,57 @@ set /a "%2=%name%/32768"
 set /a "%3=%name% %% 32768 * 10000 / 32768"
 exit /b
 
+:float_compare first second
+if %1 gtr %2 (
+	exit /b 1
+) else if %1 lss %2 (
+	exit /b -1
+) else (
+	exit /b 0
+)
+
+:float_compare_greater first second
+if %1 gtr %2 (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_less first second
+if %1 lss %2 (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_equal first second
+if %1 equ %2 (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_greater_or_equal first second
+if %1 geq %2 (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_less_or_equal first second
+if %1 leq %2 (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_not_equal first second
+if %1 neq %2 (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
 :main
 
 call :float x 200 57 59

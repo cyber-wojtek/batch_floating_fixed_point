@@ -156,6 +156,78 @@ if !__float_display_decimal_i! lss %precision% (
 )
 exit /b
 
+:float_compare first second
+call :lcm %1_denominator %2_denominator __float_compare_lcm
+set /a "first_numerator=%1_numerator * (__float_compare_lcm / %1_denominator)"
+set /a "second_numerator=%2_numerator * (__float_compare_lcm / %2_denominator)"
+if %first_numerator% gtr %second_numerator% (
+	exit /b 1
+) else if %first_numerator% lss %second_numerator% (
+	exit /b -1
+) else (
+	exit /b 0
+)
+
+:float_compare_greater first second
+call :lcm %1_denominator %2_denominator __float_compare_greater_lcm
+set /a "first_numerator=%1_numerator * (__float_compare_greater_lcm / %1_denominator)"
+set /a "second_numerator=%2_numerator * (__float_compare_greater_lcm / %2_denominator)"
+if %first_numerator% gtr %second_numerator% (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_less first second
+call :lcm %1_denominator %2_denominator __float_compare_greater_lcm
+set /a "first_numerator=%1_numerator * (__float_compare_greater_lcm / %1_denominator)"
+set /a "second_numerator=%2_numerator * (__float_compare_greater_lcm / %2_denominator)"
+if %first_numerator% lss %second_numerator% (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_equal first second
+call :lcm %1_denominator %2_denominator __float_compare_greater_lcm
+set /a "first_numerator=%1_numerator * (__float_compare_greater_lcm / %1_denominator)"
+set /a "second_numerator=%2_numerator * (__float_compare_greater_lcm / %2_denominator)"
+if %first_numerator% equ %second_numerator% (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_greater_or_equal first second
+call :lcm %1_denominator %2_denominator __float_compare_greater_lcm
+set /a "first_numerator=%1_numerator * (__float_compare_greater_lcm / %1_denominator)"
+set /a "second_numerator=%2_numerator * (__float_compare_greater_lcm / %2_denominator)"
+if %first_numerator% geq %second_numerator% (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_less_or_equal first second
+call :lcm %1_denominator %2_denominator __float_compare_greater_lcm
+set /a "first_numerator=%1_numerator * (__float_compare_greater_lcm / %1_denominator)"
+set /a "second_numerator=%2_numerator * (__float_compare_greater_lcm / %2_denominator)"
+if %first_numerator% leq %second_numerator% (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
+:float_compare_not_equal first second
+call :lcm %1_denominator %2_denominator __float_compare_greater_lcm
+set /a "first_numerator=%1_numerator * (__float_compare_greater_lcm / %1_denominator)"
+set /a "second_numerator=%2_numerator * (__float_compare_greater_lcm / %2_denominator)"
+if %first_numerator% neq %second_numerator% (
+	exit /b 1
+) else (
+	exit /b 0
+)
+
 :main
 
 call :float z 2 2 10

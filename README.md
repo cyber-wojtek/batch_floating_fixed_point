@@ -100,6 +100,36 @@ Parameters:
 Description: <br>
 This function divides the value of the first floating-point variable by the value of the second floating-point variable and stores the result in the variable specified by to. If no result variable (to) is provided, first will be updated with the result. If second is zero, the function may handle division by zero based on the system's error-handling configuration.
 </details>
+<details>
+<summary><h4>float_display</h4></summary>
+The float_display function displays floating-point variable.
+
+Syntax:
+```cmd
+call :float_display name
+```
+
+Parameters:
+- `name` (string): The name of the floating-point variable to display.
+
+Description: <br>
+This function displays the value of the floating-point variable.
+</details>
+<details>
+<summary><h4>float_display_nnl</h4></summary>
+The float_display function displays floating-point variable without appending newline.
+
+Syntax:
+```cmd
+call :float_display name
+```
+
+Parameters:
+- `name` (string): The name of the floating-point variable to display.
+
+Description: <br>
+This function displays the value of the floating-point variable without appending newline.
+</details>
 </details>
 
 ## License

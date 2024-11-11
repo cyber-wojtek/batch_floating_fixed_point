@@ -13,7 +13,19 @@ Floating/Fixed point numbers implemented purely in batch.
 
 ## Documentation
 
-[Documentation](https://linktodocumentation)
+### _float
+float name <whole_part> <numerator> <denominator>
+
+Initializes floating point variable of name `name`
+
+name - string;
+whole_part - integer; whole part of a fraction
+numerator - integer; numerator of a fraction
+denominator - integer; denominator of a fraction
+
+float_add, 
+
+float_subtract, float_multiply, float_divide
 
 
 ## License
